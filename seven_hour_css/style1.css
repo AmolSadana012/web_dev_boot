@@ -1,0 +1,36 @@
+/* mdn text-decoration site */
+p{
+    background-color:black;
+    color: aqua;
+    /* text-align: start; */
+    /* start=left aligned text */
+    text-align: end;/* right aligned text  */
+}
+h1{
+    text-align: center;
+    text-decoration:red wavy underline;
+    /* text-decoration: overline; */
+    /* text-decoration: line-through; */
+}
+a{
+    text-decoration:none ;
+    /* This way the underline will not be there in the click me. */
+}
+#h3{
+    font-weight: normal;
+}
+#h4{
+    font-weight: 200;
+}
+#one{
+    font-family:sans-serif;
+    line-height: 50px;
+}
+#two{
+    font-family:Georgia, Times, 'Times New Roman', serif ;
+    /* apply Georgia and if it doesn't work then apply Times and so on and this is called fallback mechanism.
+ */
+}
+#three{
+    text-transform: lowercase;
+}

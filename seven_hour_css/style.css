@@ -1,0 +1,33 @@
+/* Selectors:  */
+/* See changes in Code3:
+1)Universal Selector: *{},used to keep same font_size/color in the whole page.
+2)Element Selector: h1{} ,works on all elements.
+3)Id Selector: #myId{},for unique names in a class.
+4)Class Selector: .myclass{},To set same id/style for multiple elements.
+
+*/
+*{
+    color: rgb(20, 220, 153);
+}
+#headingOne{
+    color:blueviolet;
+}
+.myclass{
+    color: darkblue;
+}
+h1{/* <h1> has high priority than universal selector because it is written after it.   */
+    color:brown;
+}
+/* p{
+    color:blue;
+} */
+button{
+    color:lightcoral;
+    background-color: blue;
+}
+body{
+    background-color:rgb(0, 0, 0);
+}
+/* h1,h2,h3{
+    color: bisque;
+} */

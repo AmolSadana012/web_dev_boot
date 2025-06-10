@@ -1,0 +1,24 @@
+div{
+    height: 100px;
+    width:100px ;
+    background-color:pink ;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: brown;
+    /* border-radius: 50%;  */
+    /* To create the circle we need to make a square box.*/
+    border-radius: 10px; 
+    /* more the px/radius more round */ 
+    padding-left: 25px;
+    padding-right: 25px;
+    /* space comes between boundary and content */
+    /* margin-top: 50px; */
+    margin: 25px;
+}
+h1{
+    height: 100px;
+    background-color: aquamarine;
+    border:2px dotted black; /* Boarder shorthand */
+    text-align: center; 
+    /* Aligns according to given space not according to full page. */
+}

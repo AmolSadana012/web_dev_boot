@@ -1,0 +1,18 @@
+#box1{
+    height: 100px;
+    width: 200px;
+    background-color: green;
+    font-size: 10px;
+}
+#box2{
+    height: 50px;
+    width: 30%; 
+    /* Here 30% means 100(outer div) ka 30%. */
+    background-color: yellow;
+    margin-left: 20%;
+    font-size: 2em;
+    /* 2em means 2 times the font size of outer(parent) div */
+    /* width: 5em;*//*In case of width it sees itself*/
+    /* Here font size is 2 times box1's font size i.e 20 and width will be 5 times the fontsize of box2 i.e 100. */
+    width: 5rem;
+}

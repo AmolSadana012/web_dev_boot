@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}/*  Try to set them zero. */
+#navbar{
+    background-color: #0f1111;
+    height: 60px;
+}
+button{
+    background-color: #f08804;
+}
+#logo{
+    color: #f08804;
+    font-size: 25px;
+}
+a{
+    margin-right: 200px;
+    /* We need gap b/t 2 Anchor tags borders hence used margin instead of padding. */
+    text-decoration: none;
+    /* To remove underline below the anker line<a>. */
+}

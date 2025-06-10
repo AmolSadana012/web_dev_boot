@@ -1,0 +1,30 @@
+div{
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+    /* Drawback:
+    As when display: inline;, the top and bottom margin does not apply on inline elements. */
+
+    /* background-color: rgba(255, 0, 0, 0.5);  */
+    /* Alpha channel is used as 0.5 */
+}
+button{
+    display: block;
+    /* Button comes to next line as it's block element & requires full width. */
+}
+#div2{
+    visibility: hidden;
+    /* display: none; */
+    /* Removes the element and no space is used for it. */
+}
+#div1{
+    background-color: rgba(0, 0, 225, 0.5);
+}
+#div2{
+    background-color: rgba(0, 0, 225, 0.75);
+}
+#div3{
+    background-color: rgba(0, 0, 225, 0.25);
+}

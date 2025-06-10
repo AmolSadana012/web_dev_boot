@@ -1,0 +1,44 @@
+<!-- Box Model in CSS -->
+<!-- 
+1)All the elements in HTML are in the form of box. 
+2)Box model in css includes height(vertical),width(horizontal),border(boundary of extra space),padding(extra space around the content) and margin(space between 2 boxes/content).
+3)There are 3 major properties in border:
+    border-width:2px;
+    border_style:solid/dotted/dashed;
+    border_color:black;
+4)border shorthand,To write above 3 all together in a single line:
+    border:2px solid black;
+5)border-radius:used to round corners of an element's outer border edge. 2 way either by px or by %.
+6)padding includes, padding-left,padding-right,padding-top and padding-bottom.
+7)If we simply write padding:50px; then it means padding from TRBL.
+8)If we write padding:1px 2px 3px 4px; then it's clockwise TRBL.
+9)Margin property includes margin-right,margin-left,margin-top and margin-bottom.
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Level2</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <h1>Heading</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam unde itaque iure eius aspernatur. Quasi magni nam, molestiae, praesentium a autem id quis eveniet perferendis qui mollitia omnis quisquam laborum.</p>
+    <button> Click me! </button><br><br>
+    <div> 
+        <!-- By default the height=contents space.
+         & By default the width=full screen space.
+         -->
+        This is the first div.
+    </div><br>
+    <div>
+        This is the second div.
+    </div><br>
+    <div>
+        This is the third div.
+    </div>
+</body>
+</html>
