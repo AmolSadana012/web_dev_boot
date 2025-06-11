@@ -1,7 +1,15 @@
-<!--  -->
+<!-- Transitions(Advance CSS): -->
 <!--
-
-
+How to move/rotate the elements in 2D or 3D space,and to put effects which are not mostly required in websites.
+Enables us to define the transition(effect/changes) between 1 state to another state of an element.
+4 basic properties:
+    transition-property:transition features like fast/slow,font-size,width etc.
+    transition-duration:color change instantly or after 2s/4ms.
+    transition-timing-function:(different types of function) ease-in/ease-out/linear/steps..
+    transition-delay:after what time change should come 2s/4ms.
+Transition Shorthand:
+(propert name|duration|timing-function|delay)
+    transition:font-size 2s ease-in-out 0.2s;
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +18,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        div{
+            height:100px;
+            width: 100px;
+            background-color: aquamarine;
+            border: 2px solid black;
+            transition-property: all;
+            transition-duration: 2s;
+            /* transition-timing-function: steps(5); */
+            /*Transition will occur in exactly 5 steps.*/
+            transition-timing-function: ease-in();
+            transition-delay: 1s;/*Transition(change) will come after 1s.*/
+            /* Transition shorthand: */
+            /* transition:font-size 2s ease-in-out 0.2s; */
+        }
+        /* Pseudo class: */
+        div:hover{/*On hover(moving the corser on it), it changes the bg-color.*/
+            background-color: red;
+            color: white;
+            font-size: 20px;
+        }
+        div:active{ /*Click and hold then this effect will be visible.*/
+            background-color: pink;
+        }
     </style>
 </head>
 <body>
-    
+    <div>
+        <h1>Hi!</h1>
+    </div>
 </body>
 </html>
