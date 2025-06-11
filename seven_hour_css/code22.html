@@ -1,6 +1,14 @@
 <!-- Media Queries: -->
  <!-- 
-
+Helps in making the website responsive(opens properly in laptop,phone aqnd computer).
+         adapt according to screen size.
+written inside style.css, and maximum cases width is used.
+Used as:
+@media(width:600px){
+   div{
+      background-color:red;
+      }
+   }
  -->
  <!DOCTYPE html>
  <html lang="en">
@@ -9,10 +17,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        div{
+         height: 50px;
+         width: 50px;
+         background-color: pink;
+        }
+        @media(width:500px){ /* will only be red at 500px.*/
+         div{
+            background-color: red;
+         }
+        }
+        @media(min-width:600px){ /* will be green at 600 and above.*/
+         div{
+            background-color: green;
+         }
+        }
+        /* @media(max-width:400px){
+         div{
+            background-color: green;
+         }
+        } */
+        @media(min-width:200px)and(max-width:300px){
+         div{
+            background-color: yellow;
+         }
+        }
     </style>
  </head>
  <body>
-    
+    <Div></Div>
  </body>
  </html>
