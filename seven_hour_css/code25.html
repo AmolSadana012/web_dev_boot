@@ -1,12 +1,32 @@
 <!-- Animation -->
 <!--  
 To animate CSS elements(better way to do transforms).
-@keyframe myName{
+@keyframes myName{
     from{ font-size:20px; }
     to { font-size:40px; }
 }
 Here keyframe is like a template(blueprint), and myName=can be any name.
+from is the 1st frame/stage and to is the last frame/stage.
 
+To apply animation we use Animation Properties(like transition):
+1) animation-name
+2) animation-duration
+3) animation-timing-function
+4) animation-delay
+5) animation-iteration-count:how many times the animation should apply/work.
+6) animation-direction:specifies whether an animation should play forward, backward, or alternate directions each cycle.
+   animation-direction is having: normal(cycle),reverse(to - from),alternate(reverse according to default settings) and alternate-reverse.
+
+Animation Shorthand:
+(myName 2s linear 3s infinite normal)
+animation:directionAnimate 2s linear 3s infinite normal;
+
+% in Animation:
+@keyframes myName{
+    0%{ font-size:20px; }
+    50% { font-size:40px; }
+    100%{ font-size:60px; }
+}
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -16,22 +36,90 @@ Here keyframe is like a template(blueprint), and myName=can be any name.
     <title>Document</title>
     <style>
         div{
-
+            height:100px;
+            width: 100px;
+            background-color: aquamarine;
+            border: 2px solid black;
+            position:absolute;
+            top:100px;
+            left:100px;
+            border-radius: 50%;
+            animation-name: colorAnimate;
+            animation-duration: 0.25s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes colorAnimate{
+            from { background-color: aquamarine; }
+            to { background-color: red; }
+        }
+        .div2{
+            height:100px;
+            width: 100px;
+            color: aliceblue;
+            background-color: black;
+            border: 2px solid blue;
+            position:absolute;
+            top:200px;
+            left:200px;
+            border-radius: 0%;
+            animation-name: directionAnimate;
+            animation-duration: 2s;
+            /* animation-timing-function: ease-in; */
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* animation: directionAnimate 2s ease-in 0s infinite normal; */
+        } 
+        @keyframes directionAnimate{
+            from { left:0px;
+            background-color: yellow;
+            color: black; } 
+            to { right:90px;
+            background-color: red;
+            color: white; }
+        }
+        .div3{
+            height:100px;
+            width: 100px;
+            color: aliceblue;
+            background-color: black;
+            border: 2px solid blue;
+            position:absolute;
+            top:300px;
+            left:300px;
+            border-radius: 0%;
+            animation: direcAnimate 2s ease-in 0s infinite normal;
+        }
+        @keyframes direcAnimate{
+            0% { 
+                left:0px;
+                background-color: green;
+                color: black; 
+            } 
+            50%{ 
+                left:50px;
+                background-color: pink;
+                color: grey; 
+            } 
+            100% { 
+                right:90px;
+                background-color: blue;
+                color: white; 
+            }
         }
     </style>
 </head>
 <body>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, aliquam minus excepturi saepe dolorem repellendus! Maiores, rem dolores aspernatur temporibus vel neque molestias reiciendis aut quos molestiae consectetur voluptas fugit.
-        Molestias laudantium veniam laboriosam distinctio itaque! Sequi reiciendis dolorum tempora nihil assumenda reprehenderit possimus quisquam vel, at in omnis saepe? Ab sunt quo explicabo qui vero exercitationem corporis! Totam, natus.
-        Consequatur molestiae ipsa magni quos atque eos cumque maiores nostrum assumenda? Obcaecati sunt recusandae ut quasi fugit fuga vel totam beatae ratione veritatis molestias repellat, laudantium debitis aliquid ad at?
-        Obcaecati sapiente expedita, itaque repellat corporis nemo tenetur commodi cumque tempora magni eius deleniti dolor deserunt cupiditate atque adipisci omnis autem vitae iste mollitia consequatur porro. Consectetur quasi quisquam quo.
-        Dolorem minus alias fugit minima assumenda quibusdam facilis laboriosam natus, eos a placeat totam ut, doloremque numquam vero illum enim! Ipsa facere temporibus aspernatur culpa explicabo, ullam vitae officiis voluptatibus!
-        Vitae deleniti possimus ipsum sapiente vero consequatur quaerat facilis ab nemo esse. Quaerat, totam rem aliquid asperiores molestias fugiat magni corporis ipsa, voluptas ad voluptatem iusto porro explicabo hic voluptate!
-        Asperiores laboriosam cumque ipsa soluta molestias magni iusto itaque deleniti veniam nostrum repudiandae quasi alias quaerat eligendi illum, unde vel, quas voluptas voluptatum harum assumenda nobis architecto. Placeat, facilis beatae!
-        Beatae a delectus nulla inventore corrupti excepturi non. Mollitia illo commodi, ea explicabo repudiandae non totam itaque fugiat voluptates, numquam iste porro odio autem assumenda libero doloribus sapiente dolor? Unde.
-        Quisquam quae quos velit excepturi blanditiis iure, sapiente officia dolorem, porro illo voluptate harum? Veniam voluptate, odit architecto soluta porro necessitatibus suscipit eligendi qui! Modi corrupti enim placeat deleniti eius.
-        Cupiditate aperiam blanditiis provident nostrum dolore! Optio dolor natus architecto illo tempora autem saepe exercitationem sit dolore ex eligendi eius, expedita culpa alias ipsum quos, odio odit impedit perferendis eos.
-    </p>
+    <div>
+        <h2>Hi!</h2>
+    </div>
+    <div class="div2">
+        <h3>Hello</h3>
+    </div>
+    <div class="div3">
+        <h3>Hello</h3>
+    </div>
 </body>
 </html>
