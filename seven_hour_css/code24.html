@@ -1,0 +1,59 @@
+<!-- CSS Transform(advance css):  -->
+<!-- 
+used to apply 2D and 3D transformations(rotate,small,large) to an element.
+Transform property applies on all the elements inside that single element.
+Properties:
+1)rotate: transform:rotate(45deg); & transform:rotateX(45deg); for 3d objects.
+2)scale(big&small):along x and y axis
+3)translate:to move anything on screen. translateY:200px; and translate:100px;
+Translate property can be used for drop effect.
+4)skew:mix of different effects
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:100px;
+            width: 100px;
+            background-color: aquamarine;
+            border: 2px solid black;
+            position:absolute;
+            top:100px;
+            left:100px;
+            transition: all 2s ease-in;
+            rotate:45deg;
+            /* If we rotate on x and y then it will become too small to be visible,
+            whereas if we rotate on z then it will rotate 90deg. 
+             */
+            /* rotate: x 90deg;
+            rotate: y 90deg;
+            rotate: z 90deg; */
+            /* transform: scale(2); */
+            /* transform: scale(1,2); */
+            /*Here x=1 and y=2 */
+        }
+        div:hover{
+            /* background-color: red;
+            color: white;
+            font-size: 20px; */
+            /* transform: scaleY(2); */
+            /* transform: rotate(90deg); */
+            transform: translateX(-200px);
+            /* transform: translateX(200px); */
+            transform: skew(90deg);
+        }
+        div:active{ 
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hi!</h1>
+    </div>
+</body>
+</html>
